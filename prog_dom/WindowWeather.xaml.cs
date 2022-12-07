@@ -28,6 +28,12 @@ namespace prog_dom
 
             StreamReader sr = new StreamReader("Response\\response.json");
             DataModel data = JsonConvert.DeserializeObject<DataModel>(sr.ReadToEnd());
+            DataContext = data;
+
+            StreamReader tp = new StreamReader("Response\\response.json");
+            DataModel temp = JsonConvert.DeserializeObject<DataModel>(tp.ReadToEnd());
+            DataContext = temp;
+
         }
     }
 }
