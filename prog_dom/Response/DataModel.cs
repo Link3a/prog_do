@@ -10,9 +10,15 @@ namespace prog_dom.Response
 {
     public class DataModel
     {
+        [JsonProperty(PropertyName = "now")]
+        public DateTime Now { get; set; }
         [JsonProperty(PropertyName = "temp")]
         public int Temp { get; set; }
         [JsonProperty(PropertyName = "feels_like")]
         public int FeelsLike { get; set; }
+        [JsonProperty(PropertyName = "condition")]
+        public string Condition { get; set; }
+        [JsonProperty(PropertyName = "season")]
+        public string Season { get; set; }
     }
 }

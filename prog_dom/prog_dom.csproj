@@ -87,6 +87,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Response\DataModel.cs" />
+    <Compile Include="Response\DateTime.cs" />
     <Compile Include="WindowDockPanel.xaml.cs">
       <DependentUpon>WindowDockPanel.xaml</DependentUpon>
     </Compile>

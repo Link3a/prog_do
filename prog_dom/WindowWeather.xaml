@@ -17,17 +17,38 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Horizontal"
+        <StackPanel Orientation="Vertical"
                     Grid.Row="1" Grid.Column="1"
                     Grid.ColumnSpan="2">
             <TextBlock>
                 <TextBlock.Text>
-                    <MultiBinding StringFormat="Ощущаеется как {0} C">
-                        <Binding Path="FeelsLike"/>
+                    <MultiBinding StringFormat="Погода на {0}">
+                        <Binding Path="Now"/>
                     </MultiBinding>
                 </TextBlock.Text>
             </TextBlock>
-            
+            <TextBlock>
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="Текущее время года {0} C">
+                        <Binding Path="Season"/>
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock Text="{Binding Path = Condition}"/>
+            <TextBlock HorizontalAlignment="Left">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="Температура {0} C">
+                        <Binding Path="Temp"/>
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+                <TextBlock>
+                     <TextBlock.Text>
+                    <MultiBinding StringFormat="Ощущаеется как {0} C">
+                        <Binding Path="FeelsLike"/>
+                     </MultiBinding>
+                      </TextBlock.Text>
+                </TextBlock>
         </StackPanel>
                     
     </Grid>

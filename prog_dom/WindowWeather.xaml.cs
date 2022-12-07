@@ -25,7 +25,6 @@ namespace prog_dom
         public WindowWeather()
         {
             InitializeComponent();
-
             StreamReader sr = new StreamReader("Response\\response.json");
             DataModel data = JsonConvert.DeserializeObject<DataModel>(sr.ReadToEnd());
             DataContext = data;
